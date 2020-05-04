@@ -1,0 +1,28 @@
+.footer{
+    background-color: $color-grey-dark;
+    padding: 10rem 10rem;
+    font-size: 1.4rem;
+    height: 45rem;
+
+    &__logo-box{
+        float: left;
+        display: block;
+        margin-bottom: 8rem;
+        text-transform: uppercase;
+        color: $color-white;
+        letter-spacing: 5px;
+    }
+
+    &__logo{
+        margin-bottom: 2rem;
+        width:20rem;
+        margin-left: 6.5rem;
+
+    }
+    &__about-us{
+        margin-top: 3rem;
+        float:right;
+        display: block;
+        color: $color-white;
+    }
+}

@@ -1,0 +1,75 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+    }
+    &--white {
+        border-radius: 100px;
+        padding: 1rem 3rem;
+        background-color:$color-white;
+        color: $color-grey-dark;
+        font-size: 1.2rem;
+        font-weight: 30;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &--blue{
+        border-radius: 100px;
+        padding: 0.5rem 1rem;
+        background-color: rgba($color-blue-light,0.8);
+        color:  $color-grey-dark;
+        font-size:0.8rem;
+        font-weight: 20;
+        &::after {
+            background-color: $color-blue-light
+        }
+    }
+    &--green {
+        border-radius: 100px;
+        padding: 1rem 3rem;
+        background-color: rgba($color-primary, 0.8);
+        color: white;
+        font-weight: 700;
+        &::after {
+            background-color: $color-primary
+        }
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2px rgba($color-black,.4);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1px rgba($color-black,.4);
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
